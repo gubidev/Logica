@@ -22,7 +22,7 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
+a) A saída será undefined seguido de erro ✅
 
 b) A saída será 5 seguido de 10
 
@@ -43,7 +43,7 @@ function soma(a, b) {
 console.log(soma(2, 0));
 ```
 
-a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
+a) Substituir if (a || b === 0) por if (a === 0 || b === 0)✅
 
 b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
@@ -78,7 +78,7 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+b) O código imprime 200.✅
 
 c) O código imprime 50.
 
@@ -99,7 +99,7 @@ b) 6
 
 c) 18
 
-d) 24
+d) 24✅
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -113,7 +113,7 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+c) ["banana", "abacaxi", "manga", "laranja"]✅
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
 ______
