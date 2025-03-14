@@ -182,7 +182,7 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+b) A asserção é verdadeira e a razão é falsa.✅
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
