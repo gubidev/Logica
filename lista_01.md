@@ -101,6 +101,8 @@ b) 6
 c) 18
 
 d) 24✅
+
+Justificativa: O numeros.map faz com que os numeros no array sejam multiplicados por 2, ou seja o x (numeros no array)*2, o filter faz com que os numeros que são maiores que 5 sejam removidos  e o reduce faz com que os numeros sejam somados, o 0 no final do reduce é o valor inicial da soma, ou seja 0+6+8+10 = 24
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
