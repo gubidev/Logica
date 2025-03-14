@@ -30,6 +30,7 @@ c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
 
+ Justificativa: O código acima irá gerar um undefined, pois a variável x foi declarada apos o console.log o que faz com que o código seja lido sem um valor de x, pois apesar do var ser universal o valor foi definido depois. Logo apos o undefined o código irá gerar um erro, pois o let não permite que a variável seja chamada antes de ser declarada, já que o let pode ser acessado apenas por quem está no escopo dele.
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 
