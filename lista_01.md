@@ -52,6 +52,8 @@ c) Substituir if (a || b === 0) por if (a && b === 0)
 
 d) Remover completamente a verificação if (a || b === 0)
 
+Justificativa: O código está verificando a || (b === 0), porém a não está sendo definido o valor de a então retorna o erro de numero invalido.
+
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
 ```javascript
@@ -84,6 +86,8 @@ b) O código imprime 200.✅
 c) O código imprime 50.
 
 d) O código gera um erro.
+
+Justificativa: O switch não tem break após case "eletrônico", então por conta disso o codigo continua rodando para o próximo case, atribuindo preco = 200 antes de parar com o  break.
 
 ______
 **4) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -119,6 +123,9 @@ b) ["banana", "abacaxi", "manga"]
 c) ["banana", "abacaxi", "manga", "laranja"]✅
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+
+Justificativa:
+Inicialmente temos uma lista com banana, maça, uva, laranja, porém com o splice cortamos o item 1 e 2 da lista para adicionar abacaxi e manga, os itens 1 e 2 seriam maça e uva, já que o primeiro (banana) seria o numero 0.
 ______
 **6) Abaixo há duas afirmações sobre herança em JavaScript. Indique a alternativa correta e justifique sua resposta**
 
@@ -133,6 +140,10 @@ b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeir
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
 d) A primeira afirmação é falsa, e a segunda é verdadeira.
+
+Justificativa:
+A herança é utilizada para compartilhar métodos e propriedades entre classes em JavaScript, permitindo que uma classe herde os métodos de outra sem a necessidade de repetir código e além disso em JavaScript, a herança é implementada através da palavra-chave extends, entao por isso é a "A".
+
 ______
 **7) Dado o seguinte código. Indique a alternativa correta e justifique sua resposta.**
 
@@ -176,6 +187,8 @@ c) Apenas II é verdadeira.
 
 d) Apenas I é verdadeira.
 
+Justificativa: 
+A classe Funcionario herda Pessoa e pode acessar nome e idade, O método apresentar() da subclasse chama super.apresentar() e afirmação III é falsa, pois JavaScript suporta herança de classes.
 ______
 
 **8) Analise as afirmações a seguir. Indique a alternativa correta e justifique sua resposta.**
@@ -190,6 +203,9 @@ b) A asserção é verdadeira e a razão é falsa.✅
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
 d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
+
+Justificativa:
+O polimorfismo permite com que diferentes classes tenham métodos com o mesmo nome, mas comportamentos distintos e JavaScript não suporta sobrecarga de métodos como em Java ou C++.
 
 ______
 
@@ -206,6 +222,22 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
+
+Resposta:
+
+```javascript
+function somaArray(numeros) {
+    let soma = 0; // Inicializa a soma corretamente
+    
+    for (let i = 0; i < numeros.length; i++) { // Size trocado por length
+        soma += 2 * numeros[i]; // Corrigida a soma acumulativa
+    }
+    return soma;
+}
+console.log(somaArray([1, 2, 3, 4])); 
+```
+
+
 ______
 10) Crie um exemplo prático no qual você tenha duas classes:
 
@@ -213,3 +245,32 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+Resposta:
+```javascript
+class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    calcularDesconto() {
+        return this.preco * 0.9; // Desconto de 10%
+    }
+}
+
+class Livro extends Produto {
+    calcularDesconto() {
+        return this.preco * 0.8; // Desconto de 20% para livros
+    }
+}
+
+let produto = new Produto("Produto", 100);
+
+let livro = new Livro("Livro", 50);
+
+console.log(produto.calcularDesconto());
+
+console.log(livro.calcularDesconto()); 
+```
+Então aqui nos criamos uma classe chamada produto dando a ela um consructor com nome e preco e após isso um calcular desconto para descontas 10% do valor, apos isso criei a classe livro que se expandiu da classe produto adicionando um novo calcular desconto de 20%. Assim no let colocamos os produtos com nome e preço e damos um console log para calcular o desconto em cima desse preço.
